@@ -1,0 +1,48 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-item {
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.project-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px;
+  align-items: flex-start;
+}
+
+.project-detail .project-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.project-detail .project-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-detail .project-info {
+  flex: 1;
+  min-width: 300px;
+}
