@@ -11,8 +11,8 @@
 }
 
 .project-item img {
-  width: 300px;   /* fixed width */
-  height: 200px;
+  width: 100%;   /* fixed width */
+  height: auto;
   border-radius: 8px;
 }
 
@@ -47,3 +47,4 @@
   min-width: 300px;
 
 }
+
