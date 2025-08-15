@@ -11,8 +11,8 @@
 }
 
 .project-item img {
-  width: 100%;
-  height: auto;
+  width: 300px;   /* fixed width */
+  height: 200px;
   border-radius: 8px;
 }
 
@@ -45,4 +45,5 @@
 .project-detail .project-info {
   flex: 1;
   min-width: 300px;
+
 }
