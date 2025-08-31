@@ -7,6 +7,7 @@
 
 .projects-grid img {
   width: auto;        /* make image take full width of its grid cell */
+  max-width: 300px;   /* maximum width limit */
   height: 200px;      /* fixed height */
   object-fit: cover;  /* crop edges but keep aspect ratio */
   border-radius: 8px; /* optional: rounded corners */
@@ -19,6 +20,7 @@
 
 .project-item img {
   width: auto;   /* fixed width */
+  max-width: 300px;   /* maximum width limit */
   height: 200px;
   border-radius: 8px;
 }
@@ -105,6 +107,7 @@
 .contact-form button:hover {
   background: #005bb5;
 }
+
 
 
 
