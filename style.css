@@ -6,7 +6,7 @@
 }
 
 .projects-grid img {
-  width: 100%;        /* make image take full width of its grid cell */
+  width: auto;        /* make image take full width of its grid cell */
   height: 200px;      /* fixed height */
   object-fit: cover;  /* crop edges but keep aspect ratio */
   border-radius: 8px; /* optional: rounded corners */
@@ -18,8 +18,8 @@
 }
 
 .project-item img {
-  width: 100%;   /* fixed width */
-  height: auto;
+  width: auto;   /* fixed width */
+  height: 200px;
   border-radius: 8px;
 }
 
@@ -105,6 +105,7 @@
 .contact-form button:hover {
   background: #005bb5;
 }
+
 
 
 
