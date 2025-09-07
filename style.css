@@ -148,6 +148,27 @@
   margin-bottom: 12px;
 }
 
+.slideshow-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px; /* 图片之间的间隙 */
+  padding: 20px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.slide img {
+  height: 200px;   /* 固定高度 */
+  width: auto;     /* 宽度自动，保持比例 */
+  border-radius: 8px;
+}
+
+
+
 
 
 
