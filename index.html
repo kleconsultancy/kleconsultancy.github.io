@@ -642,8 +642,28 @@ function filterProjects() {
     &copy; 2025 KLE Consultancy Pte. Ltd. All rights reserved.
 </footer>
 
+<script>
+let container = document.querySelector('.slideshow-container');
+let scrollAmount = 0;
+
+function autoScroll() {
+  scrollAmount += 1;
+  if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+    scrollAmount = 0; // 回到开头
+  }
+  container.scrollTo({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+}
+
+setInterval(autoScroll, 30); // 数字越小滚动越快
+</script>
+
+</body>
 </body>
 </html>
+
 
 
 
