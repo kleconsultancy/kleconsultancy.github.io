@@ -108,6 +108,34 @@
   background: #005bb5;
 }
 
+#contributions {
+  padding: 40px;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+#contributions h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+#contributions h3 {
+  margin-top: 20px;
+  color: #00509e;
+}
+
+#contributions ul {
+  padding-left: 20px;
+}
+
+#contributions li {
+  margin-bottom: 12px;
+}
+
+
+
 
 
 
