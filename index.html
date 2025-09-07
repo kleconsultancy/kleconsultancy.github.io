@@ -961,26 +961,55 @@ function filterProjects() {
 </footer>
 
 <script>
-let container = document.querySelector('.slideshow-container');
-let scrollAmount = 0;
+(function () {
+  const track = document.getElementById('slideshow-track');
+  if (!track) return;
 
-function autoScroll() {
-  scrollAmount += 1;
-  if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-    scrollAmount = 0; // 回到开头
+  // Duplicate slides once to enable seamless loop
+  track.innerHTML += track.innerHTML;
+
+  let pos = 0;
+  const SPEED = 0.5; // pixels per frame; increase for faster movement
+
+  function frame() {
+    pos += SPEED;
+
+    // The total scrollable width equals the full width of the (duplicated) track.
+    // Half of it is the original set; when we pass half, reset without visual jump.
+    const halfWidth = track.scrollWidth / 2;
+    if (pos >= halfWidth) pos = 0;
+
+    track.style.transform = `translateX(${-pos}px)`;
+    requestAnimationFrame(frame);
   }
-  container.scrollTo({
-    left: scrollAmount,
-    behavior: "smooth"
-  });
-}
 
-setInterval(autoScroll, 10); // 数字越小滚动越快
+  // Start
+  requestAnimationFrame(frame);
+
+  // Pause on hover (optional)
+  track.addEventListener('mouseenter', () => track.dataset.pause = '1');
+  track.addEventListener('mouseleave', () => track.dataset.pause = '0');
+
+  // If you enabled pause above, switch to this version of frame:
+  /*
+  function frame() {
+    if (track.dataset.pause !== '1') {
+      pos += SPEED;
+      const halfWidth = track.scrollWidth / 2;
+      if (pos >= halfWidth) pos = 0;
+      track.style.transform = `translateX(${-pos}px)`;
+    }
+    requestAnimationFrame(frame);
+  }
+  */
+})();
 </script>
+
 
 </body>
 </body>
 </html>
+
 
 
 
