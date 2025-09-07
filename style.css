@@ -30,17 +30,32 @@
 .project-item {
   text-align: center;
   transition: transform 0.2s;
+  perspective: 1000px; /* enable 3D effect */
 }
 
-.project-item img {
+.project-item_old img {
   width: auto;   /* fixed width */
   max-width: 280px;   /* maximum width limit */
   height: 200px;
   border-radius: 8px;
 }
 
-.project-item:hover {
+.project-item_old:hover {
   transform: scale(1.05);
+}
+
+.project-item img {
+  height: 200px;          /* your fixed height */
+  width: auto;            /* keep ratio */
+  max-width: 280px;   /* maximum width limit */
+  border-radius: 10px;    /* rounded corners */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-item img:hover {
+  transform: rotateY(15deg) rotateX(5deg) scale(1.05); /* tilt + zoom */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5); /* stronger shadow on hover */
 }
 
 .project-item h3 {
@@ -198,6 +213,7 @@
 .slideshow-viewport::-webkit-scrollbar { display: none; }
 .slideshow-viewport { -ms-overflow-style: none; scrollbar-width: none; }
 */
+
 
 
 
