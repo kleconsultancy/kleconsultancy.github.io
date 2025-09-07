@@ -167,6 +167,38 @@
   border-radius: 8px;
 }
 
+/* Outer viewport hides the scrollbar entirely */
+.slideshow-viewport {
+  overflow: hidden;           /* no horizontal scrollbar */
+  padding: 16px 0;            /* optional top/bottom breathing room */
+}
+
+/* Horizontal rail of slides */
+.slideshow-track {
+  display: flex;
+  gap: 20px;                  /* fixed spacing between photos */
+  align-items: center;
+  will-change: transform;     /* smoother animation */
+}
+
+/* Each slide (optional if you want hover effects later) */
+.slide { flex: 0 0 auto; }
+
+/* Images: fixed height, auto width, keep ratio */
+.slideshow-track img {
+  height: 200px;              /* <-- your fixed height */
+  width: auto;                /* keep aspect ratio */
+  max-width: 320px;           /* optional: cap width if you want */
+  border-radius: 8px;         /* optional: rounded corners */
+  display: block;
+}
+
+/* (Optional) If you ever switch back to overflow scrolling & want to hide scrollbars) */
+/*
+.slideshow-viewport::-webkit-scrollbar { display: none; }
+.slideshow-viewport { -ms-overflow-style: none; scrollbar-width: none; }
+*/
+
 
 
 
